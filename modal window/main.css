@@ -1,0 +1,101 @@
+body{
+    
+background-image: linear-gradient(
+  45deg,
+  hsl(240deg 100% 20%) 0%,
+  hsl(289deg 100% 21%) 11%,
+  hsl(315deg 100% 27%) 22%,
+  hsl(329deg 100% 36%) 33%,
+  hsl(337deg 100% 43%) 44%,
+  hsl(357deg 91% 59%) 56%,
+  hsl(17deg 100% 59%) 67%,
+  hsl(34deg 100% 53%) 78%,
+  hsl(45deg 100% 50%) 89%,
+  hsl(55deg 100% 50%) 100%
+);   
+background-repeat: no-repeat;
+background-size:cover;
+height: 100vh;
+margin: 0px;
+padding: 0px;
+
+}
+.modalBtns{
+    display: flex;
+    justify-content: space-evenly;
+    padding:20px;
+}
+
+.modalBtns button{
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    width: 200px;
+    height: 35px;
+       transition: 1s all;
+
+}
+.modalBtns button:hover{
+    background-color: gainsboro;
+    opacity: 0.8;
+}
+
+    .modalWindow{
+    padding: 40px;
+    background-color: white;
+    width: 30%;
+   margin: auto;
+   top: 50%;
+       border-radius: 7px;
+       position: relative;
+       z-index: 2;
+
+}
+.modalWindow button{
+    position: absolute;
+    top:40px;
+    left: 80%;
+    background-color: transparent;
+    border: none;
+    font-size: 27px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    transition: 1s all;
+    
+}
+.modalWindow button:hover{
+  background-color: gainsboro;
+  border-radius: 50%;
+}
+
+
+.overlay{
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.hidden{
+    display: none;
+}
+@media (max-width:625px){
+    .modalBtns button{
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    .modalBtns{
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .modalWindow button{
+        left: 80%;
+    }
+}
